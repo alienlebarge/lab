@@ -1,42 +1,13 @@
 dl {
     width : 80%;
-    border-bottom: thin solid #ccc;
+    display: table;
 
     dt, dd {
-        border-top: thin solid #ccc;
-        float: left;
+        display: table-cell;
         width: 25%;
+        border-bottom: thin solid #ddd;
     }
-    dt {
-        /* first row */
-        &:nth-child(1){
-            border-top: none;
-        }
-        /* end of row */
-        clear: left;
-    }
-    dd {
-        /* first row */
-        &:nth-child(2){
-            border-top: none;
-        }
-        &:nth-child(3){
-            border-top: none;
-        }
-        &:nth-child(4){
-            border-top: none;
-        }
-        margin: 0;
-    }
-
-    /* clear content after the list */
-    *zoom: 1;
-    &:before,
-    &:after {
-        display: table;
-        content: "";
-    }
-    &:after {
-        clear: both;
+    div {
+        display: table-row;
     }
 }
