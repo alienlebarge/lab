@@ -57,6 +57,12 @@ ul {
 @nbrcolumns: 4;
 ul.table {
     width: 80%;
+    border-bottom: thin solid #ccc;
+
+    /* first row */
+    :first-child span, :first-child ul {
+            border-top: none;
+    }
 
     li {
         list-style: none;
@@ -83,4 +89,14 @@ ul.table {
             }
         }
     }
+    /* clear content after the list */
+        *zoom: 1;
+        &:before,
+        &:after {
+            display: table;
+            content: "";
+        }
+        &:after {
+            clear: both;
+        }
 }
