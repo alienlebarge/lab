@@ -1,3 +1,7 @@
+/*
+ * Definition list CSS
+ */
+
 dl {
     width : 80%;
     border-bottom: thin solid #ccc;
@@ -38,5 +42,45 @@ dl {
     }
     &:after {
         clear: both;
+    }
+}
+
+/*
+ * Unordered list CSS
+ */
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+@nbrcolumns: 4;
+ul.table {
+    width: 80%;
+
+    li {
+        list-style: none;
+    }
+    span {
+        width: 100% / @nbrcolumns;
+        border-top: thin solid #ccc;
+    }
+    > li {
+        /* rows */
+        clear: both;
+
+        > span {
+            /* First row element */
+            float: left;
+        }
+        > ul {
+            float: left;
+            width: (@nbrcolumns - 1) * (100% / @nbrcolumns);
+            border-top: thin solid #ccc;
+            > li {
+                float: left;
+                width: 100% / (@nbrcolumns - 1);
+            }
+        }
     }
 }
