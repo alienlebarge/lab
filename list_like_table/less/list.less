@@ -1,0 +1,102 @@
+/*
+ * Definition list CSS
+ */
+
+dl {
+    width : 80%;
+    border-bottom: thin solid #ccc;
+
+    dt, dd {
+        border-top: thin solid #ccc;
+        float: left;
+        width: 25%;
+    }
+    dt {
+        /* first row */
+        &:nth-child(1){
+            border-top: none;
+        }
+        /* end of row */
+        clear: left;
+    }
+    dd {
+        /* first row */
+        &:nth-child(2){
+            border-top: none;
+        }
+        &:nth-child(3){
+            border-top: none;
+        }
+        &:nth-child(4){
+            border-top: none;
+        }
+        margin: 0;
+    }
+
+    /* clear content after the list */
+    *zoom: 1;
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+/*
+ * Unordered list CSS
+ */
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+@nbrcolumns: 4;
+ul.table {
+    width: 80%;
+    border-bottom: thin solid #ccc;
+
+    /* first row */
+    :first-child span, :first-child ul {
+            border-top: none;
+    }
+
+    li {
+        list-style: none;
+    }
+    span {
+        width: 100% / @nbrcolumns;
+        border-top: thin solid #ccc;
+    }
+    > li {
+        /* rows */
+        clear: both;
+
+        > span {
+            /* First row element */
+            float: left;
+        }
+        > ul {
+            float: left;
+            width: (@nbrcolumns - 1) * (100% / @nbrcolumns);
+            border-top: thin solid #ccc;
+            > li {
+                float: left;
+                width: 100% / (@nbrcolumns - 1);
+            }
+        }
+    }
+    /* clear content after the list */
+        *zoom: 1;
+        &:before,
+        &:after {
+            display: table;
+            content: "";
+        }
+        &:after {
+            clear: both;
+        }
+}

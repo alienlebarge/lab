@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>List like table</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/list.css">
+    <script src="js/libs/modernizr-2.5.3.min.js"></script>
+</head>
+<body>
+<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+chromium.org/developers/how-tos/chrome-frame-getting-started -->
+<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a
+    different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a>
+    to experience this site.</p><![endif]-->
+<header>
+    <h1>List like table</h1>
+</header>
+<div role="main">
+    <p>How to display list like table using CSS</p>
+
+    <h2>Using the <code>&lt;table&gt;</code> tag</h2>
+
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Price (Euro)</th>
+            <th>Postage and Packaging (Euro)</th>
+            <th>Estimated Delivery Time</th>
+        </tr>
+        <tr>
+            <td>Rocking Horse</td>
+            <td>&#8364;&nbsp;40.00</td>
+            <td>&#8364;&nbsp;20</td>
+            <td>3 working days</td>
+        </tr>
+        <tr>
+            <td>Princess Costume *</td>
+            <td>&#8364;&nbsp;20.00</td>
+            <td>&#8364;&nbsp;5</td>
+            <td>Next day if ordered before 12.00</td>
+        </tr>
+        <tr>
+            <td>Soldier Uniform</td>
+            <td>&#8364;&nbsp;20.00</td>
+            <td>&#8364;&nbsp;5</td>
+            <td>Next day if ordered before 12.00</td>
+        </tr>
+        <tr>
+            <td>Pink Roller Skates</td>
+            <td>&#8364;&nbsp;35.00</td>
+            <td>&#8364;&nbsp;10</td>
+            <td>Next day if ordered before 12.00</td>
+        </tr>
+        <tr>
+            <td>Black Roller Skates *</td>
+            <td>&#8364;&nbsp;35.00</td>
+            <td>&#8364;&nbsp;10</td>
+            <td>Next day if ordered before 12.00</td>
+        </tr>
+    </table>
+    <p>
+        <small>* Items marked thus are temporarily out of stock.</small>
+    </p>
+
+    <h2>Using a definition list <code>&lt;dl&gt;</code>and some CSS</h2>
+    <dl>
+        <dt>Rocking Horse</dt>
+        <dd>Price: &#8364;&nbsp;40.00</dd>
+        <dd>Postage &amp; Packing: &#8364;&nbsp;20</dd>
+        <dd>Delivery: 3 working days</dd>
+
+        <dt>Princess Costume *</dt>
+        <dd>Price: &#8364;&nbsp;20.00</dd>
+        <dd>Postage &amp; Packing: &#8364;&nbsp;5</dd>
+        <dd>Delivery: Next day if ordered before 12.00</dd>
+
+        <dt>Soldier Uniform</dt>
+        <dd>Price: &#8364;&nbsp;20.00</dd>
+        <dd>Postage &amp; Packing: &#8364;&nbsp;5</dd>
+        <dd>Delivery: Next day if ordered before 12.00</dd>
+
+        <dt>Pink Roller Skates</dt>
+        <dd>Price: &#8364;&nbsp;35.00</dd>
+        <dd>Postage &amp; Packing: &#8364;&nbsp;10</dd>
+        <dd>Delivery: Next day if ordered before 12.00</dd>
+
+        <dt>Black Roller Skates *</dt>
+        <dd>Price: &#8364;&nbsp;35.00</dd>
+        <dd>Postage &amp; Packing: &#8364;&nbsp;10</dd>
+        <dd>Delivery: Next day if ordered before 12.00</dd>
+    </dl>
+    <p>
+        <small>* Items marked thus are temporarily out of stock.</small>
+    </p>
+
+    <h2>Using a unordered list <code>&lt;ul&gt;</code>and some CSS</h2>
+    <ul class="table">
+        <li>
+            <span>Rocking Horse</span>
+            <ul>
+                <li>Price: &#8364;&nbsp;40.00</li>
+                <li>Postage &amp; Packing: &#8364;&nbsp;20</li>
+                <li>Delivery: 3 working days</li>
+            </ul>
+        </li>
+        <li>
+            <span>Princess Costume *</span>
+            <ul>
+                <li>Price: &#8364;&nbsp;20.00</li>
+                <li>Postage &amp; Packing: &#8364;&nbsp;5</li>
+                <li>Delivery: Next day if ordered before 12.00</li>
+            </ul>
+        </li>
+        <li>
+            <span>Soldier Uniform</span>
+            <ul>
+                <li>Price: &#8364;&nbsp;20.00</li>
+                <li>Postage &amp; Packing: &#8364;&nbsp;5</li>
+                <li>Delivery: Next day if ordered before 12.00</li>
+            </ul>
+        </li>
+        <li>
+            <span>Pink Roller Skates</span>
+            <ul>
+                <li>Price: &#8364;&nbsp;35.00</li>
+                <li>Postage &amp; Packing: &#8364;&nbsp;10</li>
+                <li>Delivery: Next day if ordered before 12.00</li>
+            </ul>
+        </li>
+        <li>
+            <span>Black Roller Skates *</span>
+            <ul>
+                <li>Price: &#8364;&nbsp;35.00</li>
+                <li>Postage &amp; Packing: &#8364;&nbsp;10</li>
+                <li>Delivery: Next day if ordered before 12.00</li>
+            </ul>
+        </li>
+    </ul>
+    <p>
+        <small>* Items marked thus are temporarily out of stock.</small>
+    </p>
+</div>
+<footer>
+
+</footer>
+
+</body>
+</html>
