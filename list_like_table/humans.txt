@@ -3,10 +3,10 @@
 
 
 /* TEAM */
-  <your title>: <your name>
-  Site:
-  Twitter:
-  Location:
+  <your title>: Cedric Aellen
+  Site: www.alienlebarge.ch
+  Twitter: alienlebarge
+  Location: Switzerland
 
 /* THANKS */
   Names (& URL):
