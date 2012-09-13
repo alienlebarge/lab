@@ -16,7 +16,7 @@ echo '<pre>';
 print_r($tabsemaine);
 echo '</pre>';
 
-echo '<p>la semaine compte '.$nbrjours.' jours.</p>';
+echo '<p>la semaine compte ' . $nbrjours . ' jours.</p>';
 
 $last = array_shift($tabsemaine);
 // supprime le premier élément du du tableau
@@ -36,7 +36,7 @@ echo '<pre>';
 print_r($tabphone);
 echo '</pre>';
 
-echo '<p>Le num&eacute;ro de Mike est : '.$tabphone['Mike'].'</p>';
+echo '<p>Le num&eacute;ro de Mike est : ' . $tabphone['Mike'].'</p>';
 
 echo '<h1>Server</h1>';
 
