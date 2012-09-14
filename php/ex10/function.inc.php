@@ -24,6 +24,9 @@ function listPeople($result) {
     }
 }
 
+/*
+ * Insertion
+ */
 function insertPeople($link){
 
     $query = 'INSERT INTO people (first, name, phone) VALUES ("';
