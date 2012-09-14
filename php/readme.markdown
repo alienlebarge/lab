@@ -54,7 +54,7 @@ adsad
 //codephp!
 //Balisedefindecodephp!
 ?>
-``
+```
 - Que l'on peut aussi écrire sur une seule ligne dans le cas d'instructions courtes (simple affichage d'une valeur):
 
 ```
@@ -64,9 +64,9 @@ adsad
 - Il existe également une notation HTML:
 
 ```
-<script language="php">!
-//code php!
-</script>!
+<script language="php">
+//code php
+</script>
 ```
 
 -  Mais elle est très peu utilisée.
