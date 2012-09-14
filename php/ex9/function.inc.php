@@ -13,8 +13,8 @@ function download() {
 }
 
 function upload() {
-    $uploaddir = 'lab/php/ex9/';
-    $uploadfile = $_SERVER['DOCUMENT_ROOT'] . '/' . $uploaddir . basename($_FILES['userfile']['name']);
+    $uploaddir = '/lab/php/ex9';
+    $uploadfile = $_SERVER['DOCUMENT_ROOT'] . $uploaddir . '/' . basename($_FILES['userfile']['name']);
 
     if (
         file_exists($_FILES['userfile']['tmp_name'])
