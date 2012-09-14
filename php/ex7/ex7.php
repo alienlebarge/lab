@@ -17,6 +17,7 @@
         <option value="food">Food</option>
         <option value="music">Music</option>
     </select><br />
+    <input type="hidden" name="submitted" value="1">
     <input type="submit" value="Submit" />
 </form>
 
@@ -24,27 +25,38 @@
 
 <?php
 
+require ('function.inc.php');
+
+
 // check si le formulaire a été soumis
-if (isset($_POST['first_name'])) {
-    
-    echo 'Prenom : ' . $_POST['first_name'] . '<br>';
-    echo 'Nom : ' . $_POST['last_name'] . '<br>';
-    echo 'Telephone : ' . $_POST['phone'] . '<br>';
-    echo 'Genre : ' . $_POST['gender'] . '<br>';
+if ($_POST['submitted']==1) {
 
-    // chech si il y a au moins un hobbie
-    if (isset($_POST['hobbie'])){
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $phone = $_POST['phone'];
 
-        $hobbie = $_POST['hobbie'];
-        $nb = count($hobbie);
 
-        for ($i = 0; $i < $nb; $i++) {
-            echo 'Hobbie ' . $i . ' : ' . $hobbie[$i];
+    if (/*checkName($first_name) && checkName($last_name) &&*/ checkPhone($phone)) {
+
+        echo 'Prenom : ' . $_POST['first_name'] . '<br>';
+        echo 'Nom : ' . $_POST['last_name'] . '<br>';
+        echo 'Telephone : ' . $_POST['phone'] . '<br>';
+        echo 'Genre : ' . $_POST['gender'] . '<br>';
+
+        // chech si il y a au moins un hobbie
+        if (isset($_POST['hobbie'])){
+
+            $hobbie = $_POST['hobbie'];
+            $nb = count($hobbie);
+
+            for ($i = 0; $i < $nb; $i++) {
+                echo 'Hobbie ' . $i . ' : ' . $hobbie[$i];
+            }
         }
+    } else {
+        echo 'Il y a une erreur dans le formulaire';
     }
 }
-
-
 
 ?>
 
