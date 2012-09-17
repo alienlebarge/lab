@@ -88,7 +88,7 @@ adsad
 ```
 <% //code php %>
 <%= expression %>
-``
+```
 
 - Mais uniquement si la directive **asp_tags** est activée.
 - Ainsi de manière générale, il est déconseillé d'utiliser une autre syntaxe que celle de base, ne serait-ce que pour la lisibilité de votre code.
@@ -168,8 +168,8 @@ print "Bienvenue dans ce cours PHP";
 
 ```
 <?php
-/*!Commentaire sur plusieurs lignes,
-  !comme dans la plupart des autres languages. */
+/* Commentaire sur plusieurs lignes,
+   comme dans la plupart des autres languages. */
 ?>
 ```
 
