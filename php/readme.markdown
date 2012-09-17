@@ -197,3 +197,79 @@ Variables
   echo $_internal;
 ?>
 ```
+
+### Types de variables
+
+- Bien que PHP ne soit pas typé et qu'il devine le types des variables et expressions, il dispose cependant de différents type de données:
+  - Types scalaires:
+    - boolean (TRUE ou FALSE, true ou false)
+    - integer (-10, 1, 5, etc. )
+    - float (-3. 2, 4. 3, etc. )
+    - string ('Bonjour', etc. )
+  - Typescomposés:
+    - array
+    - object
+  - Typesspéciaux: !  resource
+    - NULL
+
+### Variables internes
+
+- PHP possède un certain nombre de variables internes donnant accès à certaines diverses informations associés à l'exécution du script.
+- Tel que les différents paramètres d'une requête.
+- Pour signifier leur caractère interne, leur nom commence par `_`.
+- Les plus utilisées sont:
+  - `$_SERVER` : Information sur l'environnement d'exécution.
+  - `$_POST` : Variables d'une requête POST.
+  - `$_GET` : Variables d'une requête GET.
+  - `$_REQUEST` : Variables d'une requête.
+  - `$_SESSION` : Variables de session.
+
+### Conversions implicites
+
+- PHP convertit automatiquement les variables lorsque le contexte change:
+
+```
+<?php
+$x = false;
+$y=$x+2; //la valeur de $x devient 0
+?>
+```
+
+- Les conversions entre booléens et nombres sont intuitives:
+  - TRUE devient 1, FALSE devient 0.
+  - Dans l’autre sens, 0 devient FALSE et le reste devient TRUE.
+
+### Conversions implicites de chaînes
+
+- La conversions de nombres en chaînes est directe.
+  - Il suffit d'entourer le nombre de guillemets.
+- L’inverse est un peu plus compliqué.
+  - Si la chaîne commence par un nombre, PHP considère ce
+nombre, que ce soit un entier ou un nombre à virgule.
+  - Sinon, PHP retourne 0.
+
+```
+<?php
+  $x='12test'+1;    //=12+1=13
+  $y='test12'+1;    //=0+1=1!
+  $z='12.4test'+1;  //=12.4+1=13.4
+?>
+```
+
+### Conversions explicites
+
+- Ilpeut(rarement)êtreintéressantdeforcerletyped’unevariableou d'une expression en effectuant une conversion explicite:
+
+```
+<?php
+  $as_int = (int) 12.3;            //= 12
+  $as_int = settype(12.3, 'int');  //idem
+?>
+```
+
+- Les étiquettes de conversion sont les suivantes:
+  - `(int)`, `(integer)`, `(float)`, `(double)`, `(real)`
+  - `(bool)`, `(boolean)`
+  - `(string)`, `(array)`, `(object)`, `(unset)`
+- **`(array)`** est intéressant car il permet de transformer une variable en un tableau à un seul élément.
+  - Ce qui permettra de passer la variable à une fonction attendant un tableau.
