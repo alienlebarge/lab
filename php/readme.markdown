@@ -288,6 +288,7 @@ nombre, que ce soit un entier ou un nombre à virgule.
   - `is_int()`; `is_double()`; `is_numeric()`;
   - `is_bool()`; `is_string()`; etc.
   - `unset()`; `var_dump()`;
+
 ```
 <?php!
   $x = 1;
