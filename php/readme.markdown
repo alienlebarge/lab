@@ -306,7 +306,6 @@ nombre, que ce soit un entier ou un nombre à virgule.
 - Une chaîne de caractères doit être entourée de guillemets.
 - PHP propose deux manières pour travailler avec les chaînes.
 - Avec des guillemets simples:
-
 ```
 <?php!
 $chaine = 'Je vais à l\'école';
@@ -314,7 +313,6 @@ $longue_chaine = 'Une ligne ne suffit
              pas à finir cette phrase';
 ?>
 ```
-
   - Les `'` doivent être protégés afin d’être interprétés correctement.
   - Les caractères spéciaux (`\t`, `\n`) ne sont pas interprétés.
   - Les variables ne sont pas non plus interprétées.
