@@ -331,6 +331,6 @@ $longue_chaine = 'Une ligne ne suffit
   <?php
     // \t = tabulation, \n = retour de ligne
     echo "\tprénom: $prenom\n";
-  ?>!
+  ?>
   ```
 - De manière générale, on favorise les guillemets simples lorsque cela n’est pas trop contraignant.
