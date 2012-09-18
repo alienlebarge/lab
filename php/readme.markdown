@@ -307,7 +307,7 @@ nombre, que ce soit un entier ou un nombre à virgule.
 - PHP propose deux manières pour travailler avec les chaînes.
 - Avec des guillemets simples:
 ```
-<?php!
+<?php
 $chaine = 'Je vais à l\'école';
 $longue_chaine = 'Une ligne ne suffit
              pas à finir cette phrase';
