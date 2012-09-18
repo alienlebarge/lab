@@ -291,7 +291,7 @@ nombre, que ce soit un entier ou un nombre à virgule.
 
 ```
 <?php!
-  $x = 1;!
+  $x = 1;
   echo gettype($x); //affiche le type de $x
   var_dump($x);     //affiche des infos sur $x
   unset($x);        //libère $x
@@ -301,3 +301,39 @@ nombre, que ce soit un entier ou un nombre à virgule.
 ?>
 ```
 
+### Chaînes de caractères
+
+- Une chaîne de caractères doit être entourée de guillemets.
+- PHP propose deux manières pour travailler avec les chaînes.
+- Avec des guillemets simples:
+
+```
+<?php!
+$chaine = 'Je vais à l\'école';
+$longue_chaine = 'Une ligne ne suffit
+             pas à finir cette phrase';
+?>
+```
+
+  - Les `'` doivent être protégés afin d’être interprétés correctement.
+  - Les caractères spéciaux (`\t`, `\n`) ne sont pas interprétés.
+  - Les variables ne sont pas non plus interprétées.
+  - On peut écrire sur plusieurs lignes. Ce qui est très pratique pour afficher du code HTML bien formaté.
+
+- Avec des guillemets doubles:
+```
+<?php
+  $prenom = 'Anthéa';
+  // Les variables sont remplacées!
+  echo "Bonjour $prenom";
+?>
+```
+  - Les `"`, `\` et `$` doivent être protégés.
+  - Les caractères spéciaux peuvent être utilisés:
+  ```
+  <?php
+    // \t = tabulation, \n = retour de ligne
+    echo "\tprénom: $prenom\n";
+  ?>!
+  ```
+- De manière générale, on favorise les guillemets simples lorsque cela n’est pas trop contraignant.
