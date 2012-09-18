@@ -336,4 +336,5 @@ $longue_chaine = 'Une ligne ne suffit
     echo "\tprénom: $prenom\n";
   ?>!
   ```
+
 - De manière générale, on favorise les guillemets simples lorsque cela n’est pas trop contraignant.
