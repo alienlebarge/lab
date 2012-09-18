@@ -258,7 +258,7 @@ nombre, que ce soit un entier ou un nombre à virgule.
 
 ### Conversions explicites
 
-- Ilpeut(rarement)êtreintéressantdeforcerletyped’unevariableou d'une expression en effectuant une conversion explicite:
+- Il peut (rarement) être intéressant de forcer le type d’une variable ou d'une expression en effectuant une conversion explicite:
 
 ```
 <?php
@@ -273,3 +273,31 @@ nombre, que ce soit un entier ou un nombre à virgule.
   - `(string)`, `(array)`, `(object)`, `(unset)`
 - **`(array)`** est intéressant car il permet de transformer une variable en un tableau à un seul élément.
   - Ce qui permettra de passer la variable à une fonction attendant un tableau.
+
+### Fonctions relatives aux variables
+
+- PHP offre différentes fonctions pour travailler avec les variables:
+  - `string gettype(mixed)`;
+  - `bool empty(mixed)`;
+    - Vérifie si une variable est vide.
+    - Mais uniquement une variable
+  - `bool isset(mixed, ...)`;
+    - Vérifie si une variable est définie.
+    - Utilisé pour vérifier les paramètres passés à une page PHP, en particulier pour le traitement des formulaires.
+  - `is_null(mixed)`;
+  - `is_int()`; `is_double()`; `is_numeric()`;
+  - `is_bool()`; `is_string()`; etc.
+  - `unset()`; `var_dump()`;
+
+```
+<?php!
+  $x = 1;!
+  echo gettype($x); //affiche le type de $x
+  var_dump($x);     //affiche des infos sur $x
+  unset($x);        //libère $x
+
+  if (isset($x))
+    instruction;
+?>
+```
+
