@@ -319,7 +319,6 @@ $longue_chaine = 'Une ligne ne suffit
   - Les caractères spéciaux (`\t`, `\n`) ne sont pas interprétés.
   - Les variables ne sont pas non plus interprétées.
   - On peut écrire sur plusieurs lignes. Ce qui est très pratique pour afficher du code HTML bien formaté.
-
 - Avec des guillemets doubles:
 ```
 <?php
